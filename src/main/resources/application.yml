@@ -1,0 +1,73 @@
+
+logging:
+  level:
+    org.springframework.web: info
+    com.github.binarywang.demo.wx.miniapp: debug
+    cn.binarywang.wx.miniapp: debug
+
+wx:
+  miniapp:
+    configs:
+        - appid: wx1a48b7a9aaa60da4
+          secret: 12873753b4794d14fed4ee33f232f4f3
+          token: #΢��С������Ϣ���������õ�token
+          aesKey: #΢��С������Ϣ���������õ�EncodingAESKey
+          msgDataFormat: JSON
+          notifyUrl: http://bsqsell.mynatapp.cc/sell/pay/wxNotify
+          keyPath: \cert\apiclient_cert.p12
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver #com.mysql.jdbc.Driver
+    username: root
+    password: bdqn
+    url: jdbc:mysql://localhost:3306/supermarketdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+      host: 192.168.43.14
+      port: 6379
+server:
+  servlet:
+    context-path: /fresh
+
+wechat:
+  mpAppId: wx1a48b7a9aaa60da4
+  mpAppSecret: 12873753b4794d14fed4ee33f232f4f3
+
+  appid: wx1a48b7a9aaa60da4
+  secret: 12873753b4794d14fed4ee33f232f4f3
+
+  openAppId:
+  openAppSecret:
+
+  mchId: 1534314041
+  mchKey: 57B76D18C44242DEE6A67DB5E45847CA
+  keyPath: D:\wx\apiclient_cert.p12
+  #keyPath: http://192.168.43.191/apiclient_cert.p12
+
+
+
+
+  notifyUrl: http://bsqsell.mynatapp.cc/sell/pay/wxNotify
+
+  templateId:
+      orderStatus: M1aTLCdtSJKCL-I1yAjdCJKMCXhMA8M3u7NedRFEg8o
+
+pro:
+  wechatMpAuthorize: https://bsqsell.mynatapp.cc/sell
+  wechatOpenAuthorize: https://bsqsell.mynatapp.cc/sell
+  sell: https://bsqsell.mynatapp.cc/sell
+
+
+
+
+
+
+
+
+
+
