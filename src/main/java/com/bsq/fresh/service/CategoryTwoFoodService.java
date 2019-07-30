@@ -1,5 +1,6 @@
 package com.bsq.fresh.service;
 
+import com.bsq.fresh.dto.CartDTO;
 import com.bsq.fresh.entity.CategoryTwoFood;
 
 import java.util.List;
@@ -9,10 +10,10 @@ public interface CategoryTwoFoodService {
     List<CategoryTwoFood> findAll();
 
     //加库存(修改数据库中category_two_food表中的category_two_food_stock)
-    void addStock(CategoryTwoFood categoryTwoFood);
+    void addStock(List<CartDTO> cartDTOList);
 
     //减库存(修改数据库中category_two_food表中的category_two_food_stock)
-    void reduceStock(CategoryTwoFood categoryTwoFood);
+    void reduceStock(List<CartDTO> cartDTOList);
 
     //上架 和 下架
 
@@ -29,4 +30,6 @@ public interface CategoryTwoFoodService {
      */
     //增加修改
     CategoryTwoFood save(CategoryTwoFood categoryTwoFood);
+
+    CategoryTwoFood findOne(String productId);
 }

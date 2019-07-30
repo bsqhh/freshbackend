@@ -1,6 +1,7 @@
 package com.bsq.fresh.service.impl;
 
 import com.bsq.fresh.dao.CategoryTwoFoodDao;
+import com.bsq.fresh.dto.CartDTO;
 import com.bsq.fresh.entity.CategoryTwoFood;
 import com.bsq.fresh.service.CategoryTwoFoodService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,17 +19,16 @@ public class CategoryTwoFoodServiceImpl implements CategoryTwoFoodService {
         return categoryTwoFoodDao.findAll();
     }
 
-    //加库存
     @Override
-    public void addStock(CategoryTwoFood categoryTwoFood) {
+    public void addStock(List<CartDTO> cartDTOList) {
 
     }
 
-    //减库存
     @Override
-    public void reduceStock(CategoryTwoFood categoryTwoFood) {
+    public void reduceStock(List<CartDTO> cartDTOList) {
 
     }
+
 
     @Override
     public CategoryTwoFood save(CategoryTwoFood categoryTwoFood) {
@@ -36,5 +36,10 @@ public class CategoryTwoFoodServiceImpl implements CategoryTwoFoodService {
 
 
         return categoryTwoFoodDao.save(categoryTwoFood);
+    }
+
+    @Override
+    public CategoryTwoFood findOne(String productId) {
+        return null;
     }
 }
