@@ -1,5 +1,6 @@
 package com.bsq.fresh.dto;
 
+import com.bsq.fresh.entity.OrderDetail;
 import com.bsq.fresh.enums.OrderStatusEnum;
 import com.bsq.fresh.enums.PayStatusEnum;
 import com.bsq.fresh.utils.EnumUtil;
@@ -9,6 +10,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 
 @Data
@@ -48,7 +50,7 @@ public class OrderDTO {
 
 
 
-    //List<OrderDetail> orderDetailList;
+    List<OrderDetail> orderDetailList;
 
     @JsonIgnore
     public OrderStatusEnum getOrderStatusEnum() {
