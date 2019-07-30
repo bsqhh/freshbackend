@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Data
 @Entity
@@ -13,9 +14,10 @@ public class CategoryTwoFood {
   private long categoryTwoFoodId;
   private String categoryTwoFoodImage;
   private String categoryTwoFoodDesc;
-  private double categoryTwoFoodPrice;
+  private BigDecimal categoryTwoFoodPrice;
   private double categoryTwoFoodOriginPrice;
   private long categoryTwoId;
   private long categoryTwoFoodStock;
+
 
 }
